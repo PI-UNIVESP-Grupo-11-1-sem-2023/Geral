@@ -7,55 +7,175 @@
     text-decoration: none;
 }
 
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4px;
+    color: #ffffff;
+    background: #005FB6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+#home{
+    height: 750px;
+}
+
+.conteudo_inicial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+
+}
+
+.conteudo_inicial_titulo {
+    font-family: 'Titan One';
+    font-size: 5rem;    
+    color: #005FB6;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 32px;
+}
+
+.conteudo_inicial_imagem {
+    width: 50%;
+}
+
+.conteudo_inicial_box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.conteudo_inicial_botao {
+    width: 40%;
+    height: 51px;
+    background: #75BDFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: 'Lilita One';
+    font-size: 1.5rem;
+    border-style: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body{
     box-sizing: border-box;
     height: 100vh;
     font-family: 'Lilita One';
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 h1{
     
     font-family: 'Titan One';
-    font-size: 64px;    
+    font-size: 4rem;    
     color: #005FB6;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 32px;
 
 }
-h2, p{
-    font-size: 24px;
+h2{
+    font-size: 1.5rem;
 }
 
-.Pets {
+p, li {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+}
+
+a {
+    padding-right: 1em;
+    padding-left: 1em;
+    color: #ffffff;
+    
+}
+
+.botao_voltar {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#quem_somos {
+    height: 650px;
+    margin: 1em;
+}
+
+.quem_somos_conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
+    margin: 2em;
+}
+
+#pets {
+    height: 750px;
+    margin: 1em;
+}
+
+.pets_conteudo {
     margin: 2em;
     display: flex;
     justify-content: space-between;
 
 }
 
-.cadastro_ong {
-    margin: 6% 25%;
-    width: 605px;
-    height: 434px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
+#blog {
+    margin: 1em;
+    height: 600px;
+
 }
 
-.cadastro_pet {
-    margin: 6% 25%;
-    width: 605px;
-    height: 434px;
+.blog_conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cadastro_ong, .cadastro_pet {
+    height: 600px;
+}
+
+.cadastro_ong_conteudo {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 8px;
+    margin-top: 5em;
+}
+
+
+.cadastro_pet_conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5em;
+    gap: 4px;
 }
 
 
@@ -70,18 +190,20 @@ textarea {
 }
 
 button {
-    width: 266px;
-    height: 51px;
+    width: 160px;
+    height: 40px;
+    margin-top: 2px;
+    margin-bottom: 5px;
     background: #75BDFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     color: #ffffff;
     font-family: 'Lilita One';
-    font-size: 24px;
+    font-size: 1.25rem;
     border-style: hidden;
 }
 
-.voltar {
+.voltar, .leia_mais, .quero_adotar {
     width: 163px;
     height: 35px;
     background: #75BDFF;
@@ -89,7 +211,7 @@ button {
     border-radius: 8px;
     color: #ffffff;
     font-family: 'Lilita One';
-    font-size: 24px;
+    font-size: 1.5rem;
     border-style: hidden;
 }
 
@@ -100,19 +222,29 @@ input {
     margin: 2px;
     box-sizing: border-box;
     color: black;
-    font-size: 20px;
+    font-size: 1.25rem;
     background-color: #D9D9D9;
 }
 
+.login_conteudo_formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 1em;
+}
+
+
 .login {
-    margin: 15%;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
+
 .login_conteudo {
-    margin: 0%;
     display: flex;
     align-items: center;
     justify-content: center;
