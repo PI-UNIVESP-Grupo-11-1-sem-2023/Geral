@@ -142,6 +142,11 @@ a:hover {
     justify-content: space-between;
 
 }
+.localizacao-link {
+    color: #005FB6; 
+    font-family: 'Lilita One';
+    font-size: 1.25rem;
+}
 
 #blog {
     margin: 1em;
