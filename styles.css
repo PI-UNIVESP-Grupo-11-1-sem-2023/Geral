@@ -66,7 +66,7 @@
     background: #75BDFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Lilita One';
     font-size: 1.5rem;
     border-style: hidden;
@@ -202,7 +202,7 @@ button {
     background: #75BDFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Lilita One';
     font-size: 1.25rem;
     border-style: hidden;
@@ -214,7 +214,7 @@ button {
     background: #75BDFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Lilita One';
     font-size: 1.5rem;
     border-style: hidden;
