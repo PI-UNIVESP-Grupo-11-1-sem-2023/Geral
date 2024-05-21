@@ -9,10 +9,10 @@
     <section class="cabecalho">
         <a href="index.html"><img src="img/logo-menor.png" alt="logo Petmatching"></a>
             <nav class="cabecalho-menu">
-            <a class=cabecalho-menu-item href="#home">Home</a>
-            <a class=cabecalho-menu-item href="#quem_somos">Quem Somos</a>
-            <a class=cabecalho-menu-item href="#pets">Pets</a>
-            <a class=cabecalho-menu-item href="blog.html">Blog</a>
+            <a class=cabecalho-menu-item href="index.html">Home</a>
+            <a class=cabecalho-menu-item href="index.html#quem_somos">Quem Somos</a>
+            <a class=cabecalho-menu-item href="index.html#pets">Pets</a>
+            <a class=cabecalho-menu-item href="index.html#blog.html">Blog</a>
             <a class=cabecalho-menu-item href="cadastro ong.html">Cadastrar ONG</a>
             <a class=cabecalho-menu-item href="login.html">Login ONG</a>
             </nav>
@@ -53,74 +53,85 @@
                 Esses dados coletados oferecem uma visão valiosa sobre as atitudes atuais em relação à adoção de animais e podem ajudar a ONG a alinhar suas mensagens, campanhas e eventos de adoção de forma a maximizar o impacto e promover uma cultura de adoção consciente e responsável.
             </p>
         </div>
+                <h1>Pretende adotar? Descubra agora o Pet ideal para você!</h1>
+                <div class="blog_formulario">
+                    <form id="petSurveyForm">
+                    <p>Quantas horas por dia você está em casa?
+                        <select name="hoursHome">
+                            <option value=""></option>
+                            <option value="lessThan4">Menos de 4 horas</option>
+                            <option value="between4And8">Entre 4 e 8 horas</option>
+                            <option value="moreThan8">Mais de 8 horas</option>
+                        </select>
+                    </p>
+                    <p>Você tem crianças pequenas em casa?
+                        <input type="radio" name="children" value="yes"> Sim
+                        <input type="radio" name="children" value="no"> Não
+                    </p>
+                    <p>Qual é o tamanho da sua residência?
+                        <select name="houseSize">
+                            <option value=""></option>
+                            <option value="small">Apartamento pequeno</option>
+                            <option value="medium">Casa ou apartamento de tamanho médio</option>
+                            <option value="large">Casa grande com quintal</option>
+                        </select>
+                    </p>
+                    <p>Você tem alergias a animais?
+                        <select name="allergies">
+                            <option value=""></option>
+                            <option value="severe">Sim, alergias severas</option>
+                            <option value="mild">Sim, alergias leves</option>
+                            <option value="no">Não tenho alergias</option>
+                        </select>
+                    </p>
+                    <p>Quanto tempo diário você pode dedicar a cuidar de um animal?
+                        <select name="timeForPet">
+                            <option value=""></option>
+                            <option value="lessThan30">Menos de 30 minutos</option>
+                            <option value="between30And60">Entre 30 minutos e 1 hora</option>
+                            <option value="moreThan60">Mais de 1 hora</option>
+                        </select>
+                    </p>
+                    <p>Você está disposto a gastar com cuidados veterinários, alimentação e outros custos?
+                        <select name="expenses">
+                            <option value=""></option>
+                            <option value="noLimit">Sim, não me preocupo com os custos</option>
+                            <option value="moderate">Posso gastar uma quantia moderada</option>
+                            <option value="limited">Prefiro não ter muitos gastos adicionais</option>
+                        </select>
+                    </p>
+                    <p>Qual nível de atividade você prefere em um animal de estimação?
+                        <select name="activityLevel">
+                            <option value=""></option>
+                            <option value="high">Alto, gosto de animais muito ativos</option>
+                            <option value="moderate">Moderado, prefiro um equilíbrio</option>
+                            <option value="low">Baixo, prefiro animais mais calmos</option>
+                        </select>
+                    </p>
+                    <p>Você tem outros animais de estimação em casa?
+                        <input type="radio" name="otherPets" value="yes"> Sim
+                        <input type="radio" name="otherPets" value="no"> Não
+                    </p>
+                    <p>Quão importante é para você ter um animal de estimação que seja treinável?
+                        <select name="trainability">
+                            <option value=""></option>
+                            <option value="very">Muito importante, quero ensinar muitos truques</option>
+                            <option value="somewhat">Algo importante, mas não essencial</option>
+                            <option value="notImportant">Não é importante</option>
+                        </select>
+                    </p>
+                    <button type="button" onclick="calculateResult()">Descubra seu Pet Ideal!</button>
+                    </form>
+                    <div id="resultado">
+                        <p id="resultText"></p>
+                        <img class="imagem_blog" id="resultImage" src="" alt="Resultado da Imagem">
+                    </div>
+
+                
+                </div>
+
+        </section>
         
-        <h1>Pretende adotar? Descubra agora o Pet ideal para você!</h1>
-        <div class="blog_formulario">
-            <form id="petSurveyForm">
-            <p>Quantas horas por dia você está em casa?
-                <select name="hoursHome">
-                    <option value="lessThan4">Menos de 4 horas</option>
-                    <option value="between4And8">Entre 4 e 8 horas</option>
-                    <option value="moreThan8">Mais de 8 horas</option>
-                </select>
-            </p>
-            <p>Você tem crianças pequenas em casa?
-                <input type="radio" name="children" value="yes"> Sim
-                <input type="radio" name="children" value="no" checked> Não
-            </p>
-            <p>Qual é o tamanho da sua residência?
-                <select name="houseSize">
-                    <option value="small">Apartamento pequeno</option>
-                    <option value="medium">Casa ou apartamento de tamanho médio</option>
-                    <option value="large">Casa grande com quintal</option>
-                </select>
-            </p>
-            <p>Você tem alergias a animais?
-                <select name="allergies">
-                    <option value="severe">Sim, alergias severas</option>
-                    <option value="mild">Sim, alergias leves</option>
-                    <option value="no">Não tenho alergias</option>
-                </select>
-            </p>
-            <p>Quanto tempo diário você pode dedicar a cuidar de um animal?
-                <select name="timeForPet">
-                    <option value="lessThan30">Menos de 30 minutos</option>
-                    <option value="between30And60">Entre 30 minutos e 1 hora</option>
-                    <option value="moreThan60">Mais de 1 hora</option>
-                </select>
-            </p>
-            <p>Você está disposto a gastar com cuidados veterinários, alimentação e outros custos?
-                <select name="expenses">
-                    <option value="noLimit">Sim, não me preocupo com os custos</option>
-                    <option value="moderate">Posso gastar uma quantia moderada</option>
-                    <option value="limited">Prefiro não ter muitos gastos adicionais</option>
-                </select>
-            </p>
-            <p>Qual nível de atividade você prefere em um animal de estimação?
-                <select name="activityLevel">
-                    <option value="high">Alto, gosto de animais muito ativos</option>
-                    <option value="moderate">Moderado, prefiro um equilíbrio</option>
-                    <option value="low">Baixo, prefiro animais mais calmos</option>
-                </select>
-            </p>
-            <p>Você tem outros animais de estimação em casa?
-                <input type="radio" name="otherPets" value="yes"> Sim
-                <input type="radio" name="otherPets" value="no" checked> Não
-            </p>
-            <p>Quão importante é para você ter um animal de estimação que seja treinável?
-                <select name="trainability">
-                    <option value="very">Muito importante, quero ensinar muitos truques</option>
-                    <option value="somewhat">Algo importante, mas não essencial</option>
-                    <option value="notImportant">Não é importante</option>
-                </select>
-            </p>
-            <button type="button" onclick="calculateResult()">Descubra seu Pet Ideal!</button>
-            </form>
-    
-            <p id="resultText"></p>
-            <img class="imagem_blog" id="resultImage" src="" alt="Resultado da Imagem" style="display: none;">
-        
-        </div>
     
             <script>
             function calculateResult() {
